@@ -23,10 +23,17 @@ function App() {
     }
     setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    // Memastikan audio mulai diputar saat komponen pertama kali dimount
+    audioRef.current.play();
+    setIsPlaying(true);
+  }, []);
+
   return (
     <main className="w-full grid grid-cols-12">
       <audio src="/sound.mp3" loop hidden ref={audioRef} />
-      <CoverPage />
+
       <div className="hidden lg:block lg:col-span-8 h-[100vh] w-full sticky top-0">
         <LeftPartial />
       </div>
@@ -35,7 +42,7 @@ function App() {
       </div>
       <div className="fixed bottom-10 left-10">
         <button
-          className="w-16 h-16 bg-[#423740] backdrop-blur rounded-full"
+          className="w-16 h-16 bg-[#282A39] backdrop-blur rounded-full"
           onClick={toggleAudio}
         >
           {isPlaying ? (

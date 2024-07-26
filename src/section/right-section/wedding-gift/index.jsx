@@ -2,7 +2,7 @@ import React from "react";
 
 function WeddingGift() {
   return (
-    <div className="w-full overflow-hidden text-[#f0ddc0] bg-[#423740]">
+    <div className="w-full overflow-hidden text-[#f0ddc0] bg-[#282A39]">
       <div className="p-10">
         <h1 className="font-['Rochester'] text-5xl text-center">
           Wedding Gift

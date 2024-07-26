@@ -31,7 +31,7 @@ function OpenSection() {
           alt=""
         />
       </div>
-      <div className="w-[65%] h-[75%] bg-[#282A39] border-2 relative border-[#D4C8A9] mx-auto rounded-t-full mt-16">
+      <div className="xl:w-[65%] md:w-[35%] w-[80%] h-[75%] bg-[#282A39] border-2 relative border-[#D4C8A9] mx-auto rounded-t-full mt-16">
         <img
           src="/frame/little-flower.png"
           alt=""
@@ -40,31 +40,59 @@ function OpenSection() {
         />
 
         {/* ucapan */}
-        <p className="font-['Futura Book font'] text-[#D4C8A9] mx-auto text-center px-8 mt-5">
-          bersama keluarga besar, anda diundang untuk datang ke acara pernikahan
-        </p>
 
-        <div className="my-5 mt-20">
-          <h1 className="text-center font-['Baskervville'] text-[#D4C8A9] font-bold text-5xl">
-            Cahya Aditya
-          </h1>
-          <h1 className="text-center font-['Baskervville'] text-[#D4C8A9] font-bold text-4xl my-2">
-            &
-          </h1>
-          <h1 className="text-center font-['Baskervville'] text-[#D4C8A9] font-bold text-5xl">
-            Lucinta Luna
-          </h1>
+        <div className="w-60 mx-auto relative ">
+          <div className="absolute -left-5 bottom-10 -rotate-12 wave-image">
+            <img src="/frame/opening/bunga-putih.png" className="w-20" alt="" />
+          </div>
+          <div className="absolute -right-5 bottom-10 rotate-12 wave-image">
+            <img
+              src="/frame/opening/bunga-putih.png"
+              className="w-20 -scale-100"
+              alt=""
+            />
+          </div>
+          <div
+            className="relative mx-auto bg-[#282A39]"
+            style={{
+              WebkitMaskImage: `url('/frame/bingkai-mask.png')`,
+              maskImage: `url('/frame/bingkai-mask.png')`,
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskSize: "cover",
+              maskSize: "100% 100%",
+            }}
+          >
+            {" "}
+            {/* Sesuaikan ukuran bingkai */}
+            <img
+              src={"/frame/bingkai.png"}
+              alt="Frame"
+              className="absolute w-full h-full object-fill"
+            />
+            {/* Sesuaikan padding agar sesuai dengan bingkai */}
+            <img
+              src="/couple.jpeg"
+              className="w-full h-full scale-75 object-cover"
+              alt=""
+              style={{
+                WebkitMaskImage: `url('/frame/bingkai-mask.png')`,
+                maskImage: `url('/frame/bingkai-mask.png')`,
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskSize: "cover",
+                maskSize: "100% 100%",
+              }}
+            />
+          </div>
         </div>
-
-        <p className="font-['Futura Book font'] text-[#D4C8A9] mx-auto text-center px-8 mt-10">
-          datanglah di acara pernikahan kami dan selamat menikmati hidangan dari
-          kamis
-        </p>
-
-        <p className="font-['Futura Book font'] font-bold text-[#D4C8A9] mx-auto text-center px-8 mt-10">
-          location
-          <span className="text-sm"> jln. mastrip no. 43</span>
-        </p>
+        <h1 className="font-['Baskervville'] text-[#D4C8A9] mx-auto text-center px-8 mt-10 text-xl">
+          Cahya Aditia
+          <br />
+          <span className="text-sm"> & </span>
+          <br />
+          <span>Lucinta Luna</span>
+        </h1>
       </div>
     </div>
   );
