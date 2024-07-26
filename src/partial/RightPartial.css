@@ -1,0 +1,27 @@
+@keyframes move-left-right-1 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes move-left-right-2 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+}
+
+.moving-div-1 {
+  animation: move-left-right-1 5s infinite alternate;
+}
+
+.moving-div-2 {
+  animation: move-left-right-2 5s infinite alternate;
+}
